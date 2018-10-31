@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Dave's Unit &amp; Building Tweaks</Name>
+    <Guid>d8636bd6-7eda-4161-bbe6-4b742aca58a4</Guid>
+    <ProjectGuid>de713259-9ebf-42cd-8472-9e59e3c74b1a</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>A few tweaks to make war and war preparation faster</Teaser>
+    <Description>Unit Tweaks
+
+* Builders have an extra charge, are cheaper, and can move further
+* Machine Gun has +1 range
+* Submarines and Nuclear Submarines move further and do more damage
+* Quadrimere has +1 range
+* Catapult moves further and does more damage
+* Artillery and Rocket Artillery move further and have +1 range
+* Maintenance costs have reduced by around 15%
+
+
+Building Tweaks
+
+- Granaries provide +1 amenity and +1 housing
+- Water Mill provide +1 amenity and +1 housing
+- All Commerical District buildings provide +1 amenity
+- All Neighborhood District buildings provide +1 housing
+- Building costs reduced by around 15%</Description>
+    <Authors>Dave</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>Dave's Mod</AssemblyName>
+    <RootNamespace>Dave's Mod</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="UpdateUnits"><File>Units.sql</File></UpdateDatabase><UpdateDatabase id="UpdateBuildings"><File priority="-1">Buildings.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
+    <ModProperties>
+      <CustomProperties xmlns="" />
+    </ModProperties>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Buildings.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Units.sql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
